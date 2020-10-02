@@ -26,3 +26,9 @@ Route::post('/employees/update/{id}', 'EmployeeController@save') -> name('emp-sa
 Route::get('/locations', 'LocationController@index') -> name('loc-index');
 Route::get('/locations/{id}', 'LocationController@show') -> name('loc-show');
 Route::post('/locations/update/{id}', 'LocationController@save') -> name('loc-save');
+
+
+// TASKS
+Route::get('/tasks', 'TaskController@index') -> name('task-index');
+Route::get('/tasks/{id}', 'TaskController@show') -> name('task-show');
+Route::post('/tasks/update/{id}', 'TaskController@save') -> name('task-save');

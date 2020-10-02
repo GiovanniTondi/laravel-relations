@@ -11,7 +11,7 @@
             <li>
                 <a href="{!! route('emp-index') !!}">EMPLOYEES</a>
                 <a href="{!! route('loc-index') !!}">LOCATIONS</a>
-                <a href="">TASK</a>
+                <a href="{!! route('task-index') !!}">TASK</a>
             </li>
         </ul>
     </div>

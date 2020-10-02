@@ -4,7 +4,10 @@
 
     <div class="content">
 
-        <h1>{{ $emp -> name }} {{ $emp -> lastname }}</h1>
+        <h1>
+            EMPLOYEE:
+            {{ $emp -> name }} {{ $emp -> lastname }}
+        </h1>
 
         <div class="show">
             <form action="{!! route('emp-save', $emp -> id) !!}" method="post">

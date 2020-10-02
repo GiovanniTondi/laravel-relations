@@ -5,41 +5,39 @@
     <div class="content">
 
         <h1>
-            LOCATION:
-            {{ $loc -> name }} ({{ $loc -> state }})
+            TASK:
+            {{ $task -> name }}
         </h1>
 
         <div class="show">
-            <form action="{!! route('loc-save', $loc -> id) !!}" method="post">
+            <form action="{!! route('task-save', $task -> id) !!}" method="post">
                 @csrf
                 @method('POST')
 
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" value="{{ $loc -> name }}">
+                    <input type="text" name="name" value="{{ $task -> name }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="state">State:</label>
-                    <input type="text" name="state" value="{{ $loc -> state }}">
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" value="{{ $task -> description }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="city">City:</label>
-                    <input type="text" name="city" value="{{ $loc -> city }}">
-                </div>
-
-
-                <div class="form-group">
-                    <label for="street_name">Street:</label>
-                    <input type="text" name="street_name" value="{{ $loc -> street_name }}">
+                    <label for="price">Price:</label>
+                    <input type="number" name="price" value="{{ $task -> price }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="street_address">Address:</label>
-                    <input type="text" name="street_address" value="{{ $loc -> street_address }}">
+                    <label for="start_date">Start Date:</label>
+                    <input type="text" name="start_date" value="{{ $task -> start_date }}">
                 </div>
 
+                <div class="form-group">
+                    <label for="end_date">End Date:</label>
+                    <input type="text" name="end_date" value="{{ $task -> end_date }}">
+                </div>
                 <div class="button">
 
                     <button type="submit">SAVE</button>
@@ -49,8 +47,8 @@
         </div>
 
         <div class="link-menu">
-            <a href="{!! route('loc-index') !!}">
-                RETURN TO LOCATIONS
+            <a href="{!! route('task-index') !!}">
+                RETURN TO TASKS
             </a>
             <br>
             <br>
