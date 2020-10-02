@@ -15,7 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () { return view('index'); }) -> name('index');
 
+
+// EMPLOYEES
 Route::get('/employees', 'EmployeeController@index') -> name('emp-index');
 Route::get('/employees/{id}', 'EmployeeController@show') -> name('emp-show');
-
 Route::post('/employees/update/{id}', 'EmployeeController@save') -> name('emp-save');
+
+
+// LOCATIONS
+Route::get('/locations', 'LocationController@index') -> name('loc-index');
+Route::get('/locations/{id}', 'LocationController@show') -> name('loc-show');
+Route::post('/locations/update/{id}', 'LocationController@save') -> name('loc-save');
