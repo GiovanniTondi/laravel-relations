@@ -1,0 +1,97 @@
+.content {
+
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: auto;
+
+    h1 {
+
+        margin: 30px auto;
+
+        font-size: 42px;
+    }
+
+    ul {
+        margin: 50px auto;
+        list-style: none;
+
+        a {
+            display: block;
+        }
+
+    }
+    a {
+
+        padding: 10px;
+
+        font-size: 22px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: .2s;
+
+        &:hover {
+            background-color: #8ae4bf;
+            color: #000;
+        }
+
+        &:active {
+            background-color: #fff;
+        }
+    }
+
+    .link-menu {
+        height: 100px;
+        width: 100%;
+        margin: 50px auto;
+
+        text-align: center;
+        font-size: 18px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .show {
+
+        margin: 100px auto;
+
+        .form-group {
+
+            label {
+                display: inline-block;
+
+                width: 120px;
+                margin: 10px 0;
+
+                color: #000;
+            }
+
+            input, select {
+                width: 200px;
+                padding: 5px;
+
+                border-radius: 5px;
+
+                border: solid 1px #000;
+            }
+
+        }
+
+        .button {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+
+            button {
+                padding: 5px 10px;
+            }
+        }
+    }
+
+}

@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('index'); }) -> name('index');
+
+Route::get('/employees', 'EmployeeController@index') -> name('emp-index');
+Route::get('/employees/{id}', 'EmployeeController@show') -> name('emp-show');
+
+Route::post('/employees/update/{id}', 'EmployeeController@save') -> name('emp-save');
