@@ -56,8 +56,8 @@
                 <div class="button">
 
                     <button type="submit">SAVE</button>
+                    <a class="delete" href="{!! route('emp-destroy', $emp -> id) !!}">DELETE</a>
                 </div>
-
             </form>
         </div>
 
@@ -71,7 +71,6 @@
                 HOMEPAGE
             </a>
         </div>
-
     </div>
 
 @endsection

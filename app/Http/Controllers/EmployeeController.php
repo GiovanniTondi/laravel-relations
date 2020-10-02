@@ -36,5 +36,14 @@ class EmployeeController extends Controller
 
     }
 
+    public function destroy($id) {
+
+        $emp = Employee::findOrFail($id);
+
+        $emp -> delete($id);
+
+        return redirect() -> route('emp-index');
+    }
+
 
 }
